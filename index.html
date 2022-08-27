@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Player - by Noé Mercourt</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- SCRIPTS -->
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <audio id="audio" src="" ontimeupdate="musicTimer(Math.floor(this.currentTime))"></audio>
+    <div class="wrapper">
+      <div class="content">
+
+        <div class="block" id="Nuit_noire">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/nuit_noire.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>Nuit Noire</h6>
+                    <div class="row">
+                    <span>Phelto</span>
+                    <span id="duration">2:44</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+
+        <div class="block" id="Wishlist">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/Wishlist.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>Wishlist</h6>
+                    <div class="row">
+                    <span>Beatrich</span>
+                    <span id="duration">2:33</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+        
+        <div class="block" id="Colorado">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/Colorado.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>Colorado</h6>
+                    <div class="row">
+                    <span>Milky Chance</span>
+                    <span id="duration">3:22</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+
+        <div class="block" id="Dream_on">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/Dream_on.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>Dream on</h6>
+                    <div class="row">
+                    <span>Aerosmith</span>
+                    <span id="duration">4:43</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+        
+        <div class="block" id="Falling_down">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/Falling_down.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>Falling down</h6>
+                    <div class="row">
+                    <span>Théos</span>
+                    <span id="duration">2:02</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+
+        <div class="block" id="ТАЙМАУТ">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/ТАЙМАУТ.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>ТАЙМАУТ</h6>
+                    <div class="row">
+                    <span>Nikitata</span>
+                    <span id="duration">2:01</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+
+        <div class="block" id="August">
+          <div class="image" onclick="playStop(this.parentElement.id)">
+            <img src="img/covers/August.webp" alt="Music background image"></img>
+            <img class="play_button" src="img/play.svg" alt="Play button"></img>
+            <img class="stop_button" src="img/stop.svg" alt="Stop button"></img>
+          </div>
+          <div class="block_column">
+            <div class="block_row">
+                <div class="previous">
+                    <img class="previous_button" src="img/previous.svg" alt="Previous button" onclick="previous()"></img>
+                </div>
+                <div class="column">
+                    <h6>August</h6>
+                    <div class="row">
+                    <span>Intelligency</span>
+                    <span id="duration">2:59</span>
+                    </div>
+                </div>
+                <div class="next">
+                    <img class="next_button" src="img/next.svg" alt="Next button" onclick="next()"></img>
+                </div>
+            </div>
+            <input type="range" min="0" max="100" value="0" step="1" onchange="changeTime(this)">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
